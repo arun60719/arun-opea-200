@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: farmer-assistance-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node app.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://arun420:BIWSScmD49T0noui@cluster420.wjl3mna.mongodb.net/farmer-assistance
+      - key: JWT_SECRET
+        value: your_jwt_secret_here
