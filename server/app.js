@@ -27,5 +27,14 @@ app.use('/api/miniscreen', require('./routes/miniscreen'));
 app.use('/api/gallery', require('./routes/gallery'));
 
 // Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//const PORT = process.env.PORT || 5000;
+//app.listen(PORT, () => console.log(`Server running on port ${PORT}`));  
+
+// CORS Allow
+app.use(cors({
+    origin: ['https://your-frontend-domain.up.railway.app'],
+    credentials: true
+  }));
+  
+  // Port Setup
+  const PORT = process.env.PORT || 3000;
